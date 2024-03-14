@@ -1,5 +1,6 @@
 const products = [
     {
+        _id:'1',
       name: 'Beats Studio Bluetooth Headphones',
       image: '/images/beatstudiobus.jpeg',
       description:
@@ -12,10 +13,11 @@ const products = [
       numReviews: 12,
     },
     {
+        _id:'2',
       name: 'Samsung galaxy s23',
       image: '/images/galaxys23.jpeg',
       description:
-        'Discover the Samsung Galaxy S23, featuring a revolutionary triple-camera system for superior photography and videography. Experience a significant leap in battery life and seamless performance for an all-around mobile innovation.',
+        'Discover the Samsung Galaxy S23, featuring a revolutionary triple-camera system for superior photography and v_ideography. Experience a significant leap in battery life and seamless performance for an all-around mobile innovation.',
       brand: 'Samsung',
       category: 'Electronics',
       price: 599.99,
@@ -24,6 +26,7 @@ const products = [
       numReviews: 8,
     },
     {
+        _id:'3',
       name: 'Alexa',
       image: '/images/alexa.webp',
       description:
@@ -36,6 +39,7 @@ const products = [
       numReviews: 12,
     },
     {
+        _id:'4',
       name: 'Xbox',
       image: '/images/xbox.jpeg',
       description:
@@ -48,6 +52,7 @@ const products = [
       numReviews: 12,
     },
     {
+        _id:'5',
       name: 'Ninetendo Switch',
       image: '/images/swithNT.jpeg',
       description:
@@ -60,6 +65,7 @@ const products = [
       numReviews: 10,
     },
     {
+        _id:'6',
       name: 'JBL flip 5',
       image: '/images/jblflip5.jpeg',
       description:
