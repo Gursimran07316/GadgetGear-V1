@@ -1,6 +1,5 @@
 const products = [
     {
-        _id:'1',
       name: 'Beats Studio Bluetooth Headphones',
       image: '/images/beatstudiobus.jpeg',
       description:
@@ -13,7 +12,6 @@ const products = [
       numReviews: 12,
     },
     {
-        _id:'2',
       name: 'Samsung galaxy s23',
       image: '/images/galaxys23.jpeg',
       description:
@@ -26,7 +24,6 @@ const products = [
       numReviews: 8,
     },
     {
-        _id:'3',
       name: 'Alexa',
       image: '/images/alexa.webp',
       description:
@@ -39,7 +36,6 @@ const products = [
       numReviews: 12,
     },
     {
-        _id:'4',
       name: 'Xbox',
       image: '/images/xbox.jpeg',
       description:
@@ -52,7 +48,6 @@ const products = [
       numReviews: 12,
     },
     {
-        _id:'5',
       name: 'Ninetendo Switch',
       image: '/images/swithNT.jpeg',
       description:
@@ -65,7 +60,6 @@ const products = [
       numReviews: 10,
     },
     {
-        _id:'6',
       name: 'JBL flip 5',
       image: '/images/jblflip5.jpeg',
       description:
