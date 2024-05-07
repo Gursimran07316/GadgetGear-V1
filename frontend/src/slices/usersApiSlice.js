@@ -28,8 +28,22 @@ export const userApiSlice = apiSlice.injectEndpoints({
         method: 'PUT',
         body: data,
       }),
+    }),getUserDetails: builder.query({
+      query: (id) => ({
+        url: `${USERS_URL}/${id}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
+    updateUser: builder.mutation({
+      query: (data) => ({
+        url: `${USERS_URL}/${data.userId}`,
+        method: 'PUT',
+        body: data,
+      }),
+      invalidatesTags: ['User'],
     }),
   }),
 });
 
-export const { useLoginMutation, useLogoutMutation ,useRegisterMutation,useProfileMutation} = userApiSlice;
+export const { useLoginMutation, useLogoutMutation ,useRegisterMutation,useProfileMutation,useUpdateUserMutation,
+  useGetUserDetailsQuery,} = userApiSlice;
