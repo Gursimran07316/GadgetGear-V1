@@ -29,6 +29,7 @@ import OrderListScreen from './screens/admin/OrderListScreen';
 import ProductListScreen from './screens/admin/ProductListScreen';
 import ProductEditScreen from './screens/admin/ProductEditScreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
+import { HelmetProvider } from 'react-helmet-async';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -69,13 +70,13 @@ const router = createBrowserRouter(
 );
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <HelmetProvider>
+  <Provider store={store}>
     <PayPalScriptProvider deferLoading={true}>
-        <RouterProvider router={router} />
-      </PayPalScriptProvider>
-    </Provider>
-  </React.StrictMode>
+      <RouterProvider router={router} />
+    </PayPalScriptProvider>
+  </Provider>
+</HelmetProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
