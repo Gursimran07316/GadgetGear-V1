@@ -1,20 +1,15 @@
-import { Navbar, Nav, Container,Badge ,NavDropdown} from 'react-bootstrap';
-import { FaShoppingCart, FaUser } from 'react-icons/fa';
-import { LinkContainer } from 'react-router-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
+import SearchBox from './SearchBox';
 import logo from '../assets/logo.png';
+
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const [logoutApiCall] = useLogoutMutation();
-
   const logoutHandler = async () => {
     try {
       await logoutApiCall().unwrap();
@@ -28,15 +23,16 @@ const Header = () => {
     <header>
       <Navbar bg='primary' variant='dark' expand='lg' collapseOnSelect>
         <Container>
-        <LinkContainer to='/'>
-        <Navbar.Brand>
-              <img src={logo} alt='GadgetGear'/>
-              GadgetGear
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              <img src={logo} alt='ProShop' />
+              ProShop
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
+              <SearchBox />
             <LinkContainer to='/cart'>
               <Nav.Link>
                 <FaShoppingCart /> Cart
